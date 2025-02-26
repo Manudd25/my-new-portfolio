@@ -30,7 +30,7 @@ export default function ContactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://my-new-portfolio-2.onrender.com/send"
+      const response = await fetch("https://manueladidario.onrender.com/send"
         , {
         method: "POST",
         headers: {
