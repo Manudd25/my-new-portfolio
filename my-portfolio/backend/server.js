@@ -2,12 +2,20 @@ import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 
-dotenv.config(); 
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json()); 
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 app.post("/send", async (req, res) => {
     console.log("Received request at /send", req.body); 
@@ -44,4 +52,5 @@ app.post("/send", async (req, res) => {
 });
 
 const PORT = 7777;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
