@@ -30,7 +30,8 @@ export default function ContactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:7777/send", {
+      const response = await fetch("https://my-new-portfolio-2.onrender.com/send"
+        , {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
