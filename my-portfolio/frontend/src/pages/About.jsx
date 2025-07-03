@@ -61,7 +61,7 @@ export default function AboutPage() {
       }}>
         <h1 style={{ fontSize: "3rem", marginBottom: "20px" }}>About Me</h1>
         <p style={{ fontSize: "1.3rem", lineHeight: "1.6" }}>
-          Hi! I'm Manuela, a Full-Stack Web Developer currently enrolled in a training program at DCI Berlin, 
+          Hi! I'm Manuela, a Full-Stack Web Developer who completed a training program at DCI Berlin, 
           specializing in the MERN stack. My journey into web development started in 2023, fueled by an interest in 
           building interactive and user-friendly applications.
         </p>
